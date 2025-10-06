@@ -6,4 +6,4 @@ const nextConfig = {
     remotePatterns: [{ protocol: 'https', hostname: 'cdn.shopify.com' }],
   },
 };
-module.exports = nextConfig;
+export default nextConfig;
