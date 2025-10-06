@@ -1,10 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // deja aquí tus opciones si tenías algo
-  // experimental: { appDir: true },
-  // images: { unoptimized: true },
-  // eslint: { ignoreDuringBuilds: true },
-  // typescript: { ignoreBuildErrors: true },
+  reactStrictMode: true,
+  swcMinify: true,
+  images: {
+    remotePatterns: [{ protocol: 'https', hostname: 'cdn.shopify.com' }],
+  },
 };
-
 export default nextConfig;
