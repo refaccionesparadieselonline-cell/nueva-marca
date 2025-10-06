@@ -1,3 +1,4 @@
+import "./globals.css";
 export const metadata = { title: 'Nueva Marca', description: 'Base Next' };
 
 export default function RootLayout({ children }) {
