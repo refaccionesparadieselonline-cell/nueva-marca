@@ -1,7 +1,10 @@
-import { NextResponse } from "next/server";
+// middleware.ts (en la raíz del proyecto)
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
 
-export const config = { matcher: ["/"] };
-
-export function middleware(req: Request) {
-  return NextResponse.redirect(new URL("/tienda", req.url));
+export function middleware(req: NextRequest) {
+  if (req.nextUrl.pathname === '/') {
+    return NextResponse.redirect(new URL('/tienda', req.url));
+  }
+  return NextResponse.next();
 }
