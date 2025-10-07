@@ -1,5 +1,3 @@
 {
-  "redirects": [
-    { "source": "/", "destination": "/landing", "permanent": false }
-  ]
+  "version": 2
 }
