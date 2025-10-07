@@ -82,7 +82,7 @@ export default function Tienda() {
         <p style={{ opacity: 0.7, marginTop: 6 }}>Nueva tienda — simple, rápida y enfocada en convertir 🧲</p>
       </section>
 
-      {/* Carrusel “fake” para versión 1 */}
+      {/* Carrusel horizontal simple (fake v1) */}
       <section
         style={{
           display: "grid",
