@@ -1,10 +1,10 @@
-export default function Tienda() {
-  return (
-    <main style={{padding: "24px"}}>
-      <h1 style={{fontSize: 28, fontWeight: 700}}>Tienda MRDiesel</h1>
-      <p>Esta es la nueva página. Si ves esto, ya no estás en la landing anterior.</p>
+// app/page.jsx
+import { redirect } from "next/navigation";
 
-      {/* Aquí luego pegamos el grid/stock real */}
-    </main>
-  );
+// Fuerza que no se sirva estático y evite cache
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
+export default function Home() {
+  redirect("/tienda");
 }
