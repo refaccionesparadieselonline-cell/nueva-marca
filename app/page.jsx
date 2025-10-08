@@ -222,6 +222,28 @@ export default function Page() {
           </a>
         </div>
       </footer>
+      export default function Page() {
+  return (
+    <main className="max-w-7xl mx-auto px-4 py-6">
+      {/* Header con logo */}
+      <header className="flex items-center gap-3">
+        <img
+          src="/mrdiesel-logo.png"
+          alt="MRDiesel — Refacciones para camión"
+          width={84}
+          height={84}
+          className="rounded-full"
+        />
+        <h1 className="text-2xl font-bold tracking-tight">
+          Refacciones MRDiesel
+        </h1>
+      </header>
+
+      {/* ...el resto de tu página... */}
+    </main>
+  );
+}
+
     </>
   );
 }
