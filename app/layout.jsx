@@ -1,12 +1,12 @@
-export const metadata = {
-  title: "MRDiesel | Refacciones",
-  description: "Refacciones para camión listas para cotizar.",
-};
+// app/layout.jsx
+export const metadata = { title: "Refacciones MRDiesel" };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body>{children}</body>
+      <body style={{ margin: 0, fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, sans-serif" }}>
+        {children}
+      </body>
     </html>
   );
 }
