@@ -1,73 +1,48 @@
-// app/layout.jsx
 import "./globals.css";
+import Image from "next/image";
 
 export const metadata = {
-  title: "MRDiesel — Refacciones para camión",
+  title: "Refacciones para Camión",
   description:
-    "Refacciones para camión con envío nacional. Asesor experto, garantía 30 días y factura.",
+    "Catálogo rápido por WhatsApp. Entrega 24–48h, garantía 30 días, factura y envío nacional.",
+  icons: { icon: "/logo.png", shortcut: "/logo.png" },
+  openGraph: {
+    title: "Refacciones para Camión",
+    description: "Cotiza por WhatsApp en minutos. Entrega 24–48h y garantía 30 días.",
+    images: ["/logo.png"],
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <body>
-        {/* Top trust bar */}
-        <div className="topbar">
-          <span>🚚 Entrega 24–48h</span>
-          <span>📄 Factura</span>
-          <span>🛡️ Garantía 30 días</span>
-          <span>👨‍🔧 Asesor experto</span>
-        </div>
+        <header className="topbar">
+          <a href="/" className="brand" style={{ display: "flex", gap: 10, alignItems: "center" }}>
+            <Image src="/logo.png" alt="Refacciones para Camión" width={40} height={40} priority />
+            <div>
+              <strong style={{ fontSize: 16, color: "#eaf1ff" }}>Refacciones para Camión</strong>
+              <div style={{ fontSize: 12, color: "#9fb0ca" }}>Catálogo rápido por WhatsApp</div>
+            </div>
+          </a>
 
-        {/* Header */}
-        <header className="header">
-          <div className="container header-inner">
-            <a href="/" className="brand">
-              <img
-                src="/mrdiesel-logo.png"
-                alt="MRDiesel — Refacciones para camión"
-                width="56"
-                height="56"
-                className="brand-logo"
-              />
-              <div className="brand-text">
-                <strong>MRDiesel</strong>
-                <small>Refacciones para camión</small>
-              </div>
-            </a>
-
+          <nav className="topbar-right" style={{ marginLeft: "auto", display: "flex", gap: 10 }}>
+            <a className="chip">🚚 Entrega 24–48h</a>
+            <a className="chip">🧾 Factura</a>
+            <a className="chip">🛡️ Garantía 30 días</a>
+            <a className="chip">👨‍🔧 Asesor experto</a>
             <a
-              className="cta cta--ghost"
-              href="https://wa.me/528111111111?text=Hola%2C%20quiero%20cotizar%20refacciones%20para%20mi%20camión"
+              href="https://wa.me/528111111111?text=Hola%2C%20quisiera%20cotizar%20refacciones%20para%20camion."
               target="_blank"
-              rel="noopener noreferrer"
+              className="top-cta"
             >
               WhatsApp
             </a>
-          </div>
+          </nav>
         </header>
-
-        <main className="container">{children}</main>
-
-        <footer className="footer">
-          <div className="container footer-inner">
-            <div className="footer-brand">
-              <img
-                src="/mrdiesel-logo.png"
-                alt="MRDiesel logo"
-                width="40"
-                height="40"
-              />
-              <span>MRDiesel</span>
-            </div>
-            <p className="muted">
-              © {new Date().getFullYear()} MRDiesel. Todos los derechos
-              reservados.
-            </p>
-            <p className="muted">Envío nacional • Piezas probadas • Soporte por WhatsApp</p>
-          </div>
-        </footer>
+        {children}
       </body>
     </html>
   );
 }
+
