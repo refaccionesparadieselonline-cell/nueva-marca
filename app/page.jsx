@@ -68,4 +68,26 @@ export default function Page() {
       </section>
     </main>
   );
+import Image from "next/image";
+
+export default function Page() {
+  return (
+    <main className="container">
+      <section className="hero">
+        <div className="hero-top">
+          <Image src="/logo.png" alt="Refacciones para Camión" width={64} height={64} />
+          {/* ... resto del contenido ... */}
+        </div>
+
+        <aside /* tarjeta lateral */>
+          <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 8 }}>
+            <Image src="/logo.png" alt="Refacciones para Camión" width={28} height={28} />
+            <strong style={{ color: "#eaf1ff" }}>¿No encuentras tu pieza?</strong>
+          </div>
+          {/* ... resto ... */}
+        </aside>
+      </section>
+    </main>
+  );
+}
 }
