@@ -1,3 +1,4 @@
+// app/layout.jsx
 import "./globals.css";
 import Image from "next/image";
 
@@ -5,7 +6,7 @@ export const metadata = {
   title: "Refacciones para Camión",
   description:
     "Catálogo rápido por WhatsApp. Entrega 24–48h, garantía 30 días, factura y envío nacional.",
-  icons: { icon: "/logo.png", shortcut: "/logo.png" },
+  icons: { icon: "/logo.png", shortcut: "/logo.png", apple: "/logo.png" },
   openGraph: {
     title: "Refacciones para Camión",
     description: "Cotiza por WhatsApp en minutos. Entrega 24–48h y garantía 30 días.",
@@ -19,7 +20,14 @@ export default function RootLayout({ children }) {
       <body>
         <header className="topbar">
           <a href="/" className="brand" style={{ display: "flex", gap: 10, alignItems: "center" }}>
-            <Image src="/logo.png" alt="Refacciones para Camión" width={40} height={40} priority />
+            {/* LOGO */}
+            <Image
+              src="/logo.png"
+              alt="Refacciones para Camión"
+              width={40}
+              height={40}
+              priority
+            />
             <div>
               <strong style={{ fontSize: 16, color: "#eaf1ff" }}>Refacciones para Camión</strong>
               <div style={{ fontSize: 12, color: "#9fb0ca" }}>Catálogo rápido por WhatsApp</div>
@@ -40,7 +48,13 @@ export default function RootLayout({ children }) {
             </a>
           </nav>
         </header>
+
         {children}
+      </body>
+    </html>
+  );
+}
+
       </body>
     </html>
   );
